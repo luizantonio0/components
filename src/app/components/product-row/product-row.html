@@ -1,0 +1,25 @@
+<div class="wrapper">
+  <div class="division"></div>
+  <div class="container">
+    <h1>Conheça nossos produtos</h1>
+    <div class="card-products">
+      <div class="row-top">
+        <div class="col-12 text-center">
+          <h2>Produtos
+            <a href="#">Ver todos os produtos</a>
+          </h2>
+        </div>
+      </div>
+      <div class="row">
+        @for (product of products; track product) {
+          <app-card-products
+            [productId]="product.id"
+            [productImage]="product.image"
+            [productName]="product.name"
+            [productPrice]="product.price"
+            [buttonName]="'Mais Detalhes'">
+          </app-card-products>
+        }
+      </div>
+  </div>
+</div>

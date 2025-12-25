@@ -1,11 +1,17 @@
 .copywriting-container {
-
-  background-color: darkred;
+  background-image: url('./balcao.png');
+  background-size: cover;        /* Faz a imagem cobrir toda a div */
+  background-position: center;   /* Centraliza a imagem */
+  background-repeat: no-repeat;
   display: grid;
   grid-template-columns: repeat(12, 1fr);   /* Grid de 12 colunas */
   align-items: center;                      /* Centraliza verticalmente */
   justify-items: center;                    /* Centraliza horizontalmente os itens */
-  min-height: 100vh;                        /* (Opcional) Preenche a altura da tela */
+  min-height: 70vh;                        /* (Opcional) Preenche a altura da tela */
+  max-height: 70vh;
+  box-shadow: -1px 2px 89px 0px rgba(0,0,0,0.75) inset;
+  -webkit-box-shadow: -1px 2px 89px 0px rgba(0,0,0,0.75) inset;
+  -moz-box-shadow: -1px 2px 89px 0px rgba(0,0,0,0.75) inset;
 }
 
 .copywriting-content {
@@ -14,15 +20,38 @@
   align-items: center;                      /* Alinha conteúdo interno ao centro verticalmente */
   border: 1px solid #ccc;
   padding: 24px;
-  border-radius: 10px;
-  background-color: #eee;                 /* Fundo branco para contraste */
+  border-radius: 2vh;
 }
 
 .copywriting-image {
+  border-radius: 2vh;
   max-width: 200px;
   margin-right: 24px;
 }
 
-.copywriting-text {
+.copywriting-right {
+  color: #ffffff;
   flex: 1;
+}
+.copywriting-title{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.copywriting-title h1 {
+  font-size: 7vw;
+  text-align: center;
+  margin: 0;
+}
+.title-mobile-size{
+  display: none;
+}
+@media (max-width: 1000px) {
+  .title-mobile-size{
+    display: block;
+    font-size: 10vw;
+  }
+  .title-full-size{
+    display: none;
+  }
 }

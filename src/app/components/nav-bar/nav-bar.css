@@ -4,16 +4,21 @@ nav{
   flex-direction: row;    /* opcional, empilha as divs verticalmente */
   align-items: center;       /* centraliza horizontalmente */
   background-color: var(--bs-dark);
-  height: 13vh;
+  height: 8vh;
 }
 
 .nav-search-bar{
-  flex-grow: 1;
   display: flex;
   justify-content: center;
+  width: 40vw;
 }
 .brand-container{
   align-self: flex-end;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 30vw;
 }
 
 .navbar-brand {
@@ -22,18 +27,17 @@ nav{
   justify-content: center;
   display: flex;
   text-decoration: none;
-  height: 13vh;
+  height: 8vh;
   background-color: var(--bs-dark);
 }
 .brand-name{
-  color: black;
-  font-size: 3.8vh;
+  color: #f3f3f3;
+  font-size: 3.6vh;
   text-underline: none;
 }
 img{
-  width: 12vh;
-  height: 12vh;
-  margin-right: 10px;
+  width: 8vh;
+  height: 8vh;
 }
 .nav-list{
   list-style: none;
@@ -82,12 +86,12 @@ img{
 }
 
 .container-nav-links{
-  display: flex;
+  display: block;
+  float: right;
   flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  height: min-content;
-  width: min-content;
+  justify-content: flex-end;
+  width: 20vw;
+  height: max-content;
 }
 #navbarMenu{
   font-size: 6vh;
@@ -97,3 +101,4 @@ img{
 #navbarMenu :hover {
   cursor: pointer;
 }
+

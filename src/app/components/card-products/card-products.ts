@@ -1,18 +1,16 @@
-import { Component } from '@angular/core';
+import {Component, Input} from '@angular/core';
 import {NgOptimizedImage} from '@angular/common';
 
 @Component({
   selector: 'app-card-products',
-  imports: [
-    NgOptimizedImage
-  ],
+  imports: [],
   templateUrl: './card-products.html',
   styleUrl: './card-products.css'
 })
 export class CardProducts {
-  productName: string = 'Product Name';
-  productPrice: string = '$99.99';
-  productImage: string = 'assets/carvao.webp';
-  productId: number = 1;
-  buttonName:string = 'Add to Cart';
+  @Input () productPrice!: string
+  @Input () productImage!: string
+  @Input () productId!: number
+  @Input () buttonName!:string
+  @Input () productName!: string
 }
