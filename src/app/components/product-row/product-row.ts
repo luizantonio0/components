@@ -1,9 +1,10 @@
 import { Component } from '@angular/core';
 import {CardProducts} from '../card-products/card-products';
+import {RouterLink} from '@angular/router';
 
 @Component({
   selector: 'app-product-row',
-  imports: [CardProducts],
+  imports: [CardProducts, RouterLink],
   templateUrl: './product-row.html',
   styleUrl: './product-row.css'
 })
@@ -17,5 +18,4 @@ export class ProductRow {
   }
 
   products:any = [this.product, this.product, this.product, this.product]
-
 }
